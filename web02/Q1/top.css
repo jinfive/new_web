@@ -1,0 +1,18 @@
+li {
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+    color:green;
+    font-weight: bold;
+}
+
+a:hover {
+    background: blue;
+}
+
