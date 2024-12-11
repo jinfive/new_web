@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .outer {
+      display: grid;
+      grid-template-areas:
+        "menu menu"
+        "left  right"
+        "under under";
+      gap: 10px;
+      padding: 20px;
+    }
+    #d1 {
+      grid-area: menu;
+    }
+    #d2 {
+      grid-area: left;
+    }
+    #d3 {
+      grid-area: right;
+    }
+    #d4 {
+      grid-area: under;
+    }
+  </style>
+  <body>
+    <div class="outer">
+      <div id="d1" style="background-color: aqua">감자</div>
+      <div id="d2" style="background-color: blue">고구미</div>
+      <div id="d3" style="background-color: yellow">양파</div>
+      <div id="d4" style="background-color: pink">고기</div>
+    </div>
+  </body>
+</html>
