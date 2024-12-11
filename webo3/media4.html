@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        text-align: center;
+      }
+      .header {
+        padding: 15px;
+      }
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .menu {
+        width: 260px;
+        float: left;
+      }
+      body {
+        width: 960px;
+        overflow: hidden;
+        margin: 0px auto;
+      }
+      .money {
+        display: none;
+      }
+      .footer {
+        padding: 15px;
+        visibility: none;
+      }
+      .section {
+        width: 700px;
+        float: right;
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          width: auto;
+          overflow: auto;
+        }
+        .menu {
+          display: none;
+          width: auto;
+          float: none;
+
+        }
+        .section {
+        float: none;
+        width: auto;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="img/wide-top.png" alt="상위 메뉴" />
+    </div>
+    <div class="menu">
+      <img src="img/wide-left.png" alt="좌측 메뉴" />
+    </div>
+    <div class="money">
+      <img src="img/money.png" alt="돈" />
+    </div>
+    <div class="section">
+      <img src="img/mobile-smile.png" alt="가운데 사용" />
+    </div>
+    <div class="footer">
+      <img src="img/mobile-under.png" alt="쳇봇용" />
+    </div>
+  </body>
+</html>
