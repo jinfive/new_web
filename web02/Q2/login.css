@@ -1,0 +1,27 @@
+#main{
+    background-color: yellow;
+}
+#mainTittle{
+    color:blue;
+}
+
+td.idPw{
+    color: green;
+    font-weight: bold;
+    background-color: orange;
+}
+
+#id #password{
+    background-color: gray;
+}
+
+#buttonInput{
+  background-color: green;
+  text-align: center;
+
+}
+
+#button{
+    background-color: red;
+    
+}

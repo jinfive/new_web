@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="top.css" />
+    <style>
+      #top {
+        /* 안쪽여백 */
+        margin: 2px auto;
+        /* 바깥쪽 여백 */
+        background-color: lime;
+        width: 500px;
+        height: 100px;
+      }
+      #top nav ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      #top2 {
+        position: fixed;
+        right: 5px;
+        top: 5px;
+        background-color: black;
+        color: yellow;
+        width: 100px;
+        height: 50px;
+        border-radius: 100px 20px 100px 20px;
+        box-shadow: 5px 5px 50px gray;
+        border: 2px dotted red;
+      }
+      #content {
+      }
+      #table {
+        width: 300px;
+        height: 100px;
+        text-align: center;
+        margin: 40px;
+      }
+      #productImg {
+        height: 300px;
+      }
+      .onerow {
+        color: blue;
+        background-color: pink;
+      }
+      .value {
+        color: blue;
+      }
+      #value1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="total">
+      <div id="top">
+        <nav>
+          <ul>
+            <li>
+              <a href="member.html">회원가입</a>
+            </li>
+            <li>
+              <a href="product.html">제품정보</a>
+            </li>
+            <li>
+              <a href="bbs.html">게시판</a>
+            </li>
+            <li>
+              <a href="basket.html">장바구니</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="top2">장바구니현황</div>
+      <div
+        id="content"
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <img src="image.png" style="width: 200px; height: auto" />
+        <table border="1" id="table">
+          <tr>
+            <td class="onerow">제품번호</td>
+            <td class="value">100</td>
+          </tr>
+          <tr>
+            <td class="onerow">제품이름</td>
+            <td id="value1">shose1</td>
+          </tr>
+          <tr>
+            <td class="onerow">가격</td>
+            <td class="value">10000</td>
+          </tr>
+          <tr>
+            <td class="onerow">제조회사</td>
+            <td class="value">c100</td>
+          </tr>
+          <tr>
+            <td id="productImg" class="onerow">제품이지미</td>
+            <td class="value">
+              <img
+                src="리자몽.png"
+                style="
+                  display: block;
+                  margin: 0 auto;
+                  width: 200px;
+                  height: auto;
+                "
+              />
+            </td>
+          </tr>
+        </table>
+        <img src="image.png" style="width: 200px; height: auto" />
+      </div>
+      <img
+        src="리자몽.png"
+        style="display: block; margin: 0 auto; width: 200px; height: auto"
+      />
+    </div>
+  </body>
+</html>
