@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      today = confirm("점심을 많이 드셨나요?");
+      if (today) {
+        alert("졸리시겠군요");
+      } else {
+        alert("배고프겠다.");
+      }
+      let id = prompt("아디 입력");
+      let password = prompt("비밀번호 입력");
+      if (id == "root" && password == "1234") {
+        alert("환영합니다.");
+      } else {
+        alert("아이디 또는 비밀번호가 다릅니다.");
+      }
+      let site = prompt("자주가는 사이트 이름");
+      if (site == "네이버") {
+        location.href = "https://www.naver.com";
+      } else if (site == "다음") {
+        location.href = "https://www.daum.net";
+      } else {
+        document.write("해당 사이트로 갈 수 없습니다.");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
