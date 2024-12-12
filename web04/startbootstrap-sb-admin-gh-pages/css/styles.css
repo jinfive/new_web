@@ -52,7 +52,7 @@
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-color-rgb: 255, 255, 255;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -1913,7 +1913,7 @@ progress {
 
 .table-dark {
   --bs-table-color: #fff;
-  --bs-table-bg: #212529;
+  --bs-table-bg: #e40c46;
   --bs-table-border-color: #373b3e;
   --bs-table-striped-bg: #2c3034;
   --bs-table-striped-color: #fff;
@@ -4220,7 +4220,7 @@ textarea.form-control-lg {
 .card-body {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-  color: var(--bs-card-color);
+  color: red;
 }
 
 .card-title {
@@ -4234,6 +4234,7 @@ textarea.form-control-lg {
 
 .card-text:last-child {
   margin-bottom: 0;
+
 }
 
 .card-link + .card-link {
@@ -4542,6 +4543,7 @@ textarea.form-control-lg {
 
 .page-link, .datatable-pagination a {
   position: relative;
+
   display: block;
   padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
   font-size: var(--bs-pagination-font-size);
@@ -11130,7 +11132,7 @@ body {
 .datatable-pagination .active a,
 .datatable-pagination .active a:focus,
 .datatable-pagination .active a:hover {
-  background-color: #0d6efd;
+  background-color: red;
 }
 
 .datatable-pagination .ellipsis a,
