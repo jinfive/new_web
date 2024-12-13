@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function add(x, y) {
+      return x + y;
+    }
+    function minus(x, y) {
+      return x - y;
+    }
+    function all2(x, y) {
+      let a = add(x, y);
+      let m = minus(x, y);
+      alert("더한값" + (a + m));
+    }
+  </script>
+  <body>
+    <button onclick="add(5, 3)">더하기</button>
+    <button onclick="minus(5, 3)">뺴기</button>
+    <button onclick="all2(5, 3)">모든값더하기</button>
+  </body>
+</html>

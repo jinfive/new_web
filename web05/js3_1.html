@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function calculateSum() {
+      let n1 = parseInt(document.getElementById("n1").value);
+      let n2 = parseInt(document.getElementById("n2").value);
+      alert(n1 + n2);
+    }
+    function login() {
+      let id1 = document.getElementById("id").value;
+      let pw1 = document.getElementById("pw").value;
+      if (id1 === "root" && pw1 === "1234") {
+        alert("로그인 성공!");
+      } else {
+        alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+      }
+    }
+  </script>
+  <body>
+    숫자1:<input type="text" id="n1" /><br />
+    숫자2:<input type="text" id="n2" /><br />
+    <button onclick="calculateSum()">더하기</button>
+    <hr />
+    아이디:<input type="text" id="id" /><br />
+    비밀번호:<input type="text" id="pw" /><br />
+    <button onclick="login()">로그인</button>
+    <hr>
+    <div id="result" style="background-color: yellow;">
+      결과 들어가는곳.
+    </div>
+  </body>
+</html>
