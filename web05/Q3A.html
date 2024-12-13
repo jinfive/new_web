@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function pika() {
+          let img=document.getElementById("img");
+          img.src="피카츄.png";
+        }
+        function king() {
+            let img=document.getElementById("img");
+            img.src="거북왕.png";
+          
+        }
+        function liza() {
+            let img=document.getElementById("img");
+          img.src="리자몽.png";
+        }
+    </script>
+  </head>
+  <body>
+    <button onclick="pika()">피카츄</button>
+    <button onclick="king()">거북왕</button>
+    <button onclick="liza()">리자몽</button>
+    <hr style="background-color: red" />
+    <h3>GO POCKETMON</h3>
+    <img src="what.png" id="img" style="width: 500px" height="500px" />
+  </body>
+</html>
