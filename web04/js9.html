@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    const arr = [1, 2, 3, 5, 2, 6, 0];
+    // //1. 맨 끝에 8 읠 넣고 arr 전채 갯수 출력
+    // arr.push(8);
+    // alert(arr.length);
+    //2. 맨 끄ㅡㅌ에 들어간 8 제거 후 arr 전체 갯수 출력
+    //for문을 이용
+    // arr.pop();
+    // for (let arrs of arr) {
+    //   alert(arrs);
+    // }
+    // arr.join(",");
+
+    // let result = arr.filter( arr => arr > 3);
+    // alert(result);
+
+    //map 함수는 모든 배열에 매핑 시켜서 모두 똑같이 처리해서 결과를 배열로 만들어줌
+    // let result2 = arr.map( arr => arr*2)//모든값 2배로 곱함
+    // alert(result2);
+    // let result3 = arr.sort((x, y) => y - x);
+
+    // alert(result3);
+    let result4 = arr.reduce((sum, x) => sum + x, 1);
+    alert(result4);
+  </script>
+  <body></body>
+</html>

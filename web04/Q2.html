@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let name = "홍콩";
+      let price = 600000;
+      let people = prompt("인원을 입력하세요");
+      let tel = "010-1234-5678";
+      let wring = "마카오를 방문을 하고자 하는사람은 서류 필수 체크";
+      let plusprice = prompt("추가 경비를 입력 하세요");
+      let realplusprice = parseInt(plusprice) - 50000;
+      let totalprice = parseInt(people) * price;
+      let totalpulse = parseInt(people) * parseInt(plusprice);
+      let total = totalprice + totalpulse;
+
+      alert(
+        "여행지 명: " +
+          name +
+          "\n여행경비: " +
+          price +
+          "\n여행인원: " +
+          people +
+          "\n여행사 연락처: " +
+          tel +
+          "\n주의사항: " +
+          wring +
+          "\n추가 경비: " +
+          plusprice +
+          "\n실제 추가경비: " +
+          realplusprice +
+          "\n총 회원 원래 경비: " +
+          totalprice +
+          "\n추가 경비: " +
+          totalpulse +
+          "\n총회원 최종 경비: " +
+          total
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

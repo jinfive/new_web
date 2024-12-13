@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let count = 0;
+      while (true) {
+        document.write("1)증가 2)감소 3)종료 선택해주세요>>>>>>>> \n");
+        let input = prompt("1증가) 2감소) 3종료) 중 하나를 입력하세요");
+        if (input === "1") {
+          count++;
+        } else if (input === "2") {
+          count--;
+        } else if (input === "3") {
+          document.write("시스템을 종료합니다 현재까기 카운트는" + count);
+          break;
+        }
+        document.write("count \n");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
