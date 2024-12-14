@@ -13,66 +13,77 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      function check() {
-        //1. 입력한 값 가지고 오기
-        let user = document.querySelector("#user").value; //summer
+      let selectedPaymentMethod = "";
 
-        //2. 기존의 회원id목록
-        let list = ["apple", "root", "admin"];
-        let result = list.includes(user);
-
-        //3. 입력한 값이 list에 포함되어있으면 X
-        //--> 포함되어있으면 사용불가능한 id로 프린트
-        //    포함되어있지 않으면 사용가능한 id로 프린트
-        //4. 프린트는 result태그를 획득 후 innerHTML로 넣기
-        let resultTag = document.querySelector("#result");
-        let text = result ? "가입불가능한 아이디" : "가입가능한아이디";
-
-        resultTag.innerHTML = text;
+      function selectPaymentMethod(method) {
+        selectedPaymentMethod = method;
+        document.getElementById("selectedPayment").textContent =
+          "선택된 결제 수단: " + method;
       }
-      function checkTel() {
-        //1. 입력한 값 가지고 오기
-        let tel = document.querySelector("#tel").value; //summer
-        //2. 앞 3자리 확인
-        let prefix = tel.substring(0, 3);
 
-        //3. 랜덤 3자리 생성
-        let random = Math.floor(Math.random() * 900) + 100;
+      function check() {
+        let shop = document.getElementById("shop").value;
+        let price = parseInt(document.getElementById("price").value);
 
-        // 4.인증번호 생성 로직
-        let authNumber;
-        if (prefix === "010") {
-          authNumber = "01" + random;
-        } else if (prefix === "011") {
-          authNumber = "02" + random;
+        if (selectedPaymentMethod === "신용카드") {
+          price += 1000;
+        } else if (selectedPaymentMethod === "휴대폰 결제") {
+          price += 500;
         }
-        // 5.결과 표시
-        let resultTag = document.querySelector("#result1");
-        resultTag.innerHTML = `인증번호: ${authNumber}`;
+
+        let resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `<p>구매상점: ${shop}</p><p>최종 결제금액: ${price}원</p>`;
       }
     </script>
   </head>
 
   <body>
-    구매상점 입력: <input type="text" class="form-control" id="shop" />
-    결제금액 입력: <input type="text" class="form-control" id="price" />
-    <hr style="color: red;">
-    결제 수단 선택:<div class="dropdown">
-      <button class="dropbtn">결제하기</button>
-      <div class="dropdown-content">
-        <a href="#">신용카드</a>
-        <a href="#">휴대폰 결제</a>
-      </div>
+    구매상점 입력: <input type="text" class="form-control" id="shop" /> 결제금액
+    입력: <input type="text" class="form-control" id="price" />
+    <hr style="color: red" />
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        결제 수단 선택
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <a
+            class="dropdown-item"
+            href="#"
+            onclick="selectPaymentMethod('신용카드')"
+            >신용카드</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#"
+            onclick="selectPaymentMethod('휴대폰 결제')"
+            >휴대폰 결제</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            href="#"
+            onclick="selectPaymentMethod('계좌이체')"
+            >계좌이체</a
+          >
+        </li>
+      </ul>
     </div>
-    <button class="btn btn-info" onclick="check()">
-      회원가입시 ID중복 체크
-    </button>
-    <hr />
-    <div id="result"></div>
-    <hr />
-    전화번호 입력: <input type="text" class="form-control" id="tel" />
-    <button class="btn btn-info" onclick="checkTel()">인증번호 받기</button>
+    <div id="selectedPayment" style="margin-top: 10px; font-weight: bold"></div>
 
-    <div id="result1"></div>
+    <div id="selectedPayment" style="margin-top: 10px; font-weight: bold"></div>
+
+    <hr />
+    <button class="btn btn-primary" onclick="check()">결재금액 계산</button>
+    <div id="result"></div>
   </body>
 </html>
