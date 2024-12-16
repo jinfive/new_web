@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function greet(name) {
+        alert("Hello, " + name + "!");
+      }
+      function info(action) {
+        //입력받아서
+        let name = prompt("이름을 입력하세요");
+
+        //action함수 호출
+        action(name);
+      }
+
+      info(greet);
+    </script>
+  </body>
+</html>
