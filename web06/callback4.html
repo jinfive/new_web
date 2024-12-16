@@ -12,6 +12,22 @@
       <button type="button" id="displayBtn">Display Input</button>
     </form>
     <p id="output"></p>
+
+    <form id="colorForm">
+      <input type="radio" name="color" value="Red" /> Red
+      <input type="radio" name="color" value="Blue" /> Blue
+      <input type="radio" name="color" value="Green" /> Green <br />
+      <button type="button" id="colorSubmit">Submit</button>
+    </form>
+    <p id="output"></p>
+
+    <form id="checkboxForm">
+      <input type="checkbox" name="fruit" value="Apple" /> Apple<br />
+      <input type="checkbox" name="fruit" value="Banana" /> Banana<br />
+      <input type="checkbox" name="fruit" value="Cherry" /> Cherry<br />
+      <button type="button" id="checkSubmit">Submit</button>
+    </form>
+
     <script>
       let btn = document.getElementById("displayBtn");
       btn.addEventListener("click", function () {
@@ -22,6 +38,31 @@
         } else {
           pTag.textContent = "No input detected";
         }
+      });
+      let btn2 = document.getElementById("colorSubmit");
+      btn2.addEventListener("click", function () {
+        let color = document.querySelector("input[name='color']:checked");
+        let pTag = document.querySelector("#output");
+        if (color) {
+          pTag.textContent = "너의 색은" + color.value;
+        } else {
+          pTag.textContent = "색상을 선택하세요";
+        }
+      });
+
+      let btn3 = document.getElementById("checkSubmit");
+      btn3.addEventListener("click", function () {
+        let checks = document.querySelectorAll("input[name = 'fruit']:checked");
+        //nodeList, TagList 객체 tag,tag,tag
+        let pTag = document.querySelector("#output");
+        let result = [];
+        for (let i = 0; i < checks.length; i++) {
+          console.log(checks[i].value);
+          result.push(checks[i].value);
+        }
+        alert(result);
+        alert(result.toString());
+        alert(result.join());
       });
     </script>
   </body>
