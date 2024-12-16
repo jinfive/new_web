@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="termsForm">
+      <label>
+        <input type="checkbox" id="agreeTerms" /> I agree to the terms and
+        conditions
+      </label>
+      <br />
+      <button type="button" id="submitTerms">Submit</button>
+    </form>
+    <script>
+      //3. 체크박스가 선택되지 않았을 경우 경고 메시지 출력(필수선택입니다.),
+      //  선택되었을 때 메시지 출력(확인되었습니다)하는 코드를 작성하세요.
+      // (alert()이용)type=radio, checkbox 이벤트 처리 확인문제
+      let btn = document.getElementById("submitTerms");
+      btn.addEventListener("click", () => {
+        let checkbox = document.getElementById("agreeTerms");
+        if (checkbox.checked) {
+          alert("확인되었습니다.");
+        } else {
+          alert("필수 선택입니다.");
+        }
+      });
+    </script>
+  </body>
+</html>

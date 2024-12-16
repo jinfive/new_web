@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="hobbyForm">
+        <label><input type="checkbox" name="hobby" value="Reading"> Reading</label>
+        <label><input type="checkbox" name="hobby" value="Traveling"> Traveling</label>
+        <label><input type="checkbox" name="hobby" value="Cooking"> Cooking</label>
+        <label><input type="checkbox" name="hobby" value="Gaming"> Gaming</label>
+        <button type="button" id="submitHobby">Submit</button>
+      </form>
+      <p id="outputHobby"></p>
+      <script>
+        //사용자가 선택한 취미를 배열로 만들어 <p> 태그에 출력하는 코드를 작성하세요
+        let btn = document.getElementById("submitHobby");
+        btn.addEventListener("click", function () {
+            let hobbyInputs = document.querySelectorAll("input[name = 'hobby']:checked");
+            let pTag = document.querySelector("#outputHobby");
+            let hobbies = [];
+            hobbyInputs.forEach(function (input) {
+                hobbies.push(input.value);
+            });
+             //   let hobbies = Array.from(hobbyInputs).reduce((acc, input) => {
+            //acc.push(input.value);
+            //return acc;
+            //}, []);
+            pTag.textContent = "Selected hobbies: " + hobbies.join(", ");
+        });
+
+      </script>
+</body>
+</html>
