@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 47p AJAX아약스 :비동기 통신 js 기술 -->
+     <script>
+        function getData(url){
+            //비동기 구현
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true); //true: 비동기
+            xhr.onload = function(){
+                if(xhr.status === 200){
+                    //요청 성공
+                    console.log(xhr.responseText);
+                } else {
+                    //요청 실��
+                    console.error(xhr.status);
+                }
+            }
+            xhr.send();//요청 전송
+        }
+        getData(url)
+     </script>
+    
+</body>
+</html>
