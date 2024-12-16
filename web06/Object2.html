@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      const person = {
+        name: "John",
+        greet: function () {
+          alert(`안녕~~ 내 이름은 ${person.name} 이야 `);
+        },
+        bye() {
+          alert(`안녕히 가세요 ${person.name}`);
+        }, //최신 문법
+        city: "New York",
+        info() {
+          return "당신의 이름은 " + this.name;
+        },
+      };
+      person.greet();
+      person.bye();
+      let res = person.info();
+      alert(res);
+    </script>
+  </body>
+</html>

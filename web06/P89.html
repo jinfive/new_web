@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    const apt = {
+      name: "르네상스한강오피스텔",
+      address: "서울별시 영등포구 양평로12가길 14",
+      price: 360000000,
+      floor: 13,
+      elevator: true,
+      room: 1,
+      info() {
+        return "오피스텔 이름은 " + this.name + ", 주소는 " + this.address;
+      },
+
+      myroom() {
+        alert(
+          `방갯수 ${this.room}개 가격${this.price} 엘리베이터 유무 ${this.elevator}`
+        );
+      },
+    };
+    let inf = apt.info();
+    alert(inf);
+    apt.myroom();
+  </script>
+  <body></body>
+</html>

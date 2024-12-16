@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    const person = {
+      name: "John Doe",
+      age: 30,
+      isStudent: false,
+    };
+    console.log(person.name);
+    //자바스크립트는 객체에 변수/함수 춫가가 가능
+    person.city = "New York";
+    console.log(person.city);
+    console.log("age:" in person);
+
+    let keys = Object.keys(person);
+    console.log(keys);
+    let values = Object.values(person);
+    console.log(values);
+    let entries = Object.entries(person);
+    console.log(entries);
+  </script>
+  <body></body>
+</html>
