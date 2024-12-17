@@ -16,6 +16,7 @@ app.get("/contacts/:id", (req, res) => {
   res.status(200);
   res.send("Your id>> " + id); //ㅏ
   // res.send("Your id>> " + req.query.id); //query object
+  // res.send("Your id>> " + req.body.id); //body object
 });
 
 app.listen(3000, () => {
