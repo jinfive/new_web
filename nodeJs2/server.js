@@ -14,7 +14,7 @@ app.get("/contacts/:id", (req, res) => {
   console.log("/contacts/:id GET요청 들어옴");
   let id = req.params.id; //params object
   res.status(200);
-  res.send("Your id>> " + id); //ㅏㅏㅏㅏ
+  res.send("Your id>> " + id); //ㅏ
   // res.send("Your id>> " + req.query.id); //query object
 });
 
