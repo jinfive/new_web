@@ -1,0 +1,22 @@
+{
+  "name": "nodejs3",
+  "version": "1.0.0",
+  "description": "pratcice node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinfive/new_web.git"
+  },
+  "author": "KimJino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinfive/new_web/issues"
+  },
+  "homepage": "https://github.com/jinfive/new_web#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
