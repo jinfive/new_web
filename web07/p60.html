@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        //입력한 숫자를 가져와 두 배로 만든 결과를 alert로 출력하세요.(addEventListener를 이용)
+        document.getElementById("doubleBtn").addEventListener("click", function () {
+          let number = parseInt(document.getElementById("numberInput").value);
+          alert(number * 2);
+        });
+      };
+      //사용자가 입력한 텍스트를 가지고 와서 아래 p태그에 대문자로 변경한 것과 글자 길이를 넣어 출력하시오. 입력값이 없으면 “문장을 입력하세요 출력" (인라인 방식 이용)
+      function processText() {
+        let text = document.getElementById("textInput").value;
+        if (text === "") {
+          document.getElementById("outputUppercase").textContent = "문장을 입력하세요.";
+          document.getElementById("outputLength").textContent = "";
+        } else {
+          let uppercaseText = text.toUpperCase();
+          let length = text.length;
+          document.getElementById("outputUppercase").textContent = "Uppercase: " + uppercaseText;
+          document.getElementById("outputLength").textContent = "Length: " + length;
+        }
+      }
+
+
+
+    </script>
+  </head>
+
+  <body>
+    <form>
+      <label for="numberInput">Enter a number:</label>
+      <input type="number" id="numberInput" placeholder="Enter a number" />
+      <button type="button" id="doubleBtn">Double the number</button>
+    </form>
+
+    <hr />
+
+    <form>
+      <label for="textInput">Enter a sentence:</label>
+      <input type="text" id="textInput" placeholder="Type here..." />
+      <button type="button" onclick="processText()">Process</button>
+    </form>
+
+    <p id="outputUppercase"></p>
+    <p id="outputLength"></p>
+  </body>
+</html>
