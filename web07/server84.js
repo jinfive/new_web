@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 const path = require("path");
 
-app.get("/", (req, res) => {
+app.get("/about", (req, res) => {
   res.status(200);
   res.sendFile(path.join(__dirname, "views", "about.html"));
 });
